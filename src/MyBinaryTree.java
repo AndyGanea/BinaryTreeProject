@@ -11,7 +11,7 @@ public class MyBinaryTree {
     public void insert(StudentInfo studentToAdd, StudentInfo currentNode) {
         if (root == null) {
             root = studentToAdd;
-            numInTree = 1;
+            numInTree++;
             return;
         }
         
@@ -60,16 +60,15 @@ public class MyBinaryTree {
             System.out.println("The tree is currently empty.");
             return;
         }
-
-        
         if (currentNode.left != null) {
             postorder(currentNode.left);
         } else if(currentNode.right != null) {
             postorder(currentNode.right);
-        } else {
-            System.out.println(currentNode.studentNum);
-            return;
         }
+        
+        System.out.println(currentNode.studentNum);
+        return;
+        
     } // END OF POSTORDER
 
     public void inorder(StudentInfo currentNode) {
@@ -79,11 +78,11 @@ public class MyBinaryTree {
         }
         
         if (currentNode.left != null) {
-            postorder(currentNode.left);
+            inorder(currentNode.left);
         }
         System.out.println(currentNode.studentNum); 
         if (currentNode.right != null) {
-            postorder(currentNode.right);
+            inorder(currentNode);
         } 
         
         return;
