@@ -36,7 +36,57 @@ public class MyBinaryTree {
                 insert(studentToAdd, currentNode.right);
             }
         }
-    } // END OF 
-    
+    } // END OF INSERT
+
+    public void preorder(StudentInfo currentNode) {
+        if (numInTree == 0) {
+            System.out.println("The tree is currently empty.");
+            return;
+        }
+
+        System.out.println(currentNode.studentNum);
+
+        if (currentNode.left != null) {
+            preorder(currentNode.left);
+        } else if(currentNode.right != null) {
+            preorder(currentNode.right);
+        } else {
+            return;
+        }
+    } // END OF PREORDER
+
+    public void postorder(StudentInfo currentNode) {
+        if (numInTree == 0) {
+            System.out.println("The tree is currently empty.");
+            return;
+        }
+
+        
+        if (currentNode.left != null) {
+            postorder(currentNode.left);
+        } else if(currentNode.right != null) {
+            postorder(currentNode.right);
+        } else {
+            System.out.println(currentNode.studentNum);
+            return;
+        }
+    } // END OF POSTORDER
+
+    public void inorder(StudentInfo currentNode) {
+        if (numInTree == 0) {
+            System.out.println("The tree is currently empty.");
+            return;
+        }
+        
+        if (currentNode.left != null) {
+            postorder(currentNode.left);
+        }
+        System.out.println(currentNode.studentNum); 
+        if (currentNode.right != null) {
+            postorder(currentNode.right);
+        } 
+        
+        return;
+    } // END OF INORDER
     
 }
