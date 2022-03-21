@@ -48,9 +48,11 @@ public class MyBinaryTree {
 
         if (currentNode.left != null) {
             preorder(currentNode.left);
-        } else if(currentNode.right != null) {
+        }
+        if(currentNode.right != null) {
             preorder(currentNode.right);
-        } else {
+        } 
+        else {
             return;
         }
     } // END OF PREORDER
@@ -62,7 +64,9 @@ public class MyBinaryTree {
         }
         if (currentNode.left != null) {
             postorder(currentNode.left);
-        } else if(currentNode.right != null) {
+        } 
+        
+        if(currentNode.right != null) {
             postorder(currentNode.right);
         }
         
@@ -82,7 +86,7 @@ public class MyBinaryTree {
         }
         System.out.println(currentNode.studentNum); 
         if (currentNode.right != null) {
-            inorder(currentNode);
+            inorder(currentNode.right);
         } 
         
         return;
