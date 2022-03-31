@@ -34,7 +34,7 @@ public class Main {
 		someStudent = new StudentInfo(20, "Shreyas", "Tanguturi");
 		theTree.insert(someStudent, theTree.root);
 
-		someStudent = new StudentInfo(3, "A", "Bird");
+		someStudent = new StudentInfo(20, "A", "Bird");
 		theTree.insert(someStudent, theTree.root);
 		
 		System.out.println("\nInorder traversal!");
