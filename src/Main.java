@@ -43,11 +43,7 @@ public class Main {
 		someStudent = new StudentInfo(20, "Shreyas", "Tanguturi");
 		theTree.insert(someStudent, theTree.root);
 
-<<<<<<< HEAD
-		someStudent = new StudentInfo(20, "A", "Bird");
-=======
 		someStudent = new StudentInfo(3, "Peter", "Lu");
->>>>>>> a168bd9a24288e3355967da829dd3461ca0f1b1b
 		theTree.insert(someStudent, theTree.root);
 		
 		System.out.println("\nInorder traversal!");
