@@ -7,6 +7,15 @@ public class Main {
 		MyBinaryTree theTree = new MyBinaryTree(); // Instantiate an EMPTY tree
 		StudentInfo someStudent;
 		
+		System.out.println("\nInorder traversal!");
+		theTree.inorder(theTree.root);
+		
+		System.out.println("\nPreorder traversal!");
+		theTree.preorder(theTree.root);
+		
+		System.out.println("\nPostorder traversal!");
+		theTree.postorder(theTree.root);
+		
 		someStudent = new StudentInfo(10, "Daffy", "Duck");
 		theTree.insert(someStudent, theTree.root);
 		
@@ -34,7 +43,11 @@ public class Main {
 		someStudent = new StudentInfo(20, "Shreyas", "Tanguturi");
 		theTree.insert(someStudent, theTree.root);
 
+<<<<<<< HEAD
 		someStudent = new StudentInfo(20, "A", "Bird");
+=======
+		someStudent = new StudentInfo(3, "Peter", "Lu");
+>>>>>>> a168bd9a24288e3355967da829dd3461ca0f1b1b
 		theTree.insert(someStudent, theTree.root);
 		
 		System.out.println("\nInorder traversal!");

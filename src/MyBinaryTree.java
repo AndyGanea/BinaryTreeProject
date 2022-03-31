@@ -9,7 +9,7 @@ public class MyBinaryTree {
     }
 
     public void insert(StudentInfo studentToAdd, StudentInfo currentNode) {
-        if (root == null) {
+        if (root == null) { // If the tree is empty, the root of the tree is just the student that was added
             root = studentToAdd;
             numInTree++;
             return;
@@ -21,7 +21,7 @@ public class MyBinaryTree {
                 currentNode.left = studentToAdd;
                 numInTree++;
                 return;
-            } else {
+            } else { // If the current node on the left is occupied, we have to call insert again.
                 insert(studentToAdd, currentNode.left);
             }
         }
@@ -32,7 +32,7 @@ public class MyBinaryTree {
                 currentNode.right = studentToAdd;
                 numInTree++;
                 return;
-            } else {
+            } else { // If the current node on the right is occupied, we have to call insert again.
                 insert(studentToAdd, currentNode.right);
             }
         }
